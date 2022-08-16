@@ -5,27 +5,26 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="1131.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea1.HelloController">
+<AnchorPane fx:id="table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1131.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea1.HelloController">
    <children>
-      <Button fx:id="btn1" layoutX="24.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#SelectFile" text="SelectFile" />
-      <TableView layoutX="24.0" layoutY="73.0" prefHeight="605.0" prefWidth="1080.0">
+      <Button fx:id="btn1" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#SelectFile" text="SelectFile" />
+      <TableView fx:id="Table" layoutX="25.0" layoutY="65.0" prefHeight="605.0" prefWidth="1080.0">
         <columns>
-          <TableColumn prefWidth="53.0" text="Carné" />
-          <TableColumn prefWidth="56.0" text="Nombre" />
-            <TableColumn prefWidth="56.0" text="Correo" />
-            <TableColumn prefWidth="71.0" text="Telefono" />
-            <TableColumn prefWidth="62.0" text="Nikname" />
-            <TableColumn prefWidth="77.0" text="    Tipo &#10;Estudiante" />
-            <TableColumn prefWidth="81.0" text="   Nota &#10;Promedio &#10;Exámenes" />
-            <TableColumn minWidth="0.0" prefWidth="67.0" text="    Nota &#10;Promedio &#10;  Quices" />
-            <TableColumn minWidth="0.0" prefWidth="73.0" text="   Nota &#10;Promedio &#10;  Tareas" />
-            <TableColumn minWidth="0.0" prefWidth="84.0" text="     Nota&#10;Proyecto #1" />
-            <TableColumn prefWidth="87.0" text="    Nota&#10;Proyecto #2" />
-            <TableColumn prefWidth="92.0" text="     Nota&#10;Proyecto #3" />
-            <TableColumn prefWidth="77.0" text="Proyectos&#10;Promedio&#10;" />
-            <TableColumn prefWidth="81.0" text="Promedio &#10;Exámenes &#10;   Quices &#10;   Tareas" />
-            <TableColumn prefWidth="65.0" text="Nota &#10;Final" />
+          <TableColumn fx:id="Carne" prefWidth="53.0" text="Carné" />
+          <TableColumn fx:id="Nombre" prefWidth="56.0" text="Nombre" />
+            <TableColumn fx:id="Correo" prefWidth="56.0" text="Correo" />
+            <TableColumn fx:id="Telefono" prefWidth="71.0" text="Telefono" />
+            <TableColumn fx:id="Nikname" prefWidth="62.0" text="Nikname" />
+            <TableColumn fx:id="Tipo" prefWidth="77.0" text="    Tipo &#10;Estudiante" />
+            <TableColumn fx:id="PromedioExamenes" prefWidth="81.0" text="   Nota &#10;Promedio &#10;Exámenes" />
+            <TableColumn fx:id="PromedioQuices" minWidth="0.0" prefWidth="67.0" text="    Nota &#10;Promedio &#10;  Quices" />
+            <TableColumn fx:id="PromedioTareas" minWidth="0.0" prefWidth="73.0" text="   Nota &#10;Promedio &#10;  Tareas" />
+            <TableColumn fx:id="Proyecto1" minWidth="0.0" prefWidth="84.0" text="     Nota&#10;Proyecto #1" />
+            <TableColumn fx:id="Proyecto2" prefWidth="87.0" text="    Nota&#10;Proyecto #2" />
+            <TableColumn fx:id="Proyecto3" prefWidth="92.0" text="     Nota&#10;Proyecto #3" />
+            <TableColumn fx:id="PromedioProyectos" prefWidth="77.0" text="Proyectos&#10;Promedio&#10;" />
+            <TableColumn fx:id="PromedioExQT" prefWidth="81.0" text="Promedio &#10;Exámenes &#10;   Quices &#10;   Tareas" />
+            <TableColumn fx:id="NotaFinal" prefWidth="65.0" text="Nota &#10;Final" />
         </columns>
       </TableView>
    </children>
