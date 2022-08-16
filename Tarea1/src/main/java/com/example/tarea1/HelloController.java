@@ -110,7 +110,8 @@ public class HelloController implements Initializable {
 
             //List.add(new Student("2022049304", "oacuna@estudiantec.cr", "arty4325", "Oscar Arturo", "77", "69","90", "80", "80", "90", " 80", "90", "80", "70769040", "A"));
             for(int i = 1; i < ListSize/12; i++){
-                List.add(new Student(CSV.get(12 * i),
+                List.add(new StudentA(
+                        CSV.get(12 * i),
                         CSV.get(12 * i + 1),
                         CSV.get(12 * i + 2),
                         CSV.get(12 * i + 3),
@@ -120,11 +121,12 @@ public class HelloController implements Initializable {
                         CSV.get(12 * i + 7),
                         CSV.get(12 * i + 8),
                         CSV.get(12 * i + 9),
-                        CSV.get(12 * i + 10) ,
+                        CSV.get(12 * i + 10),
                         CSV.get(12 * i + 11),
                         "NONE",
                         "NONE",
-                        "NONE"));
+                        "NONE"
+                ));
             }
 
             Table.refresh(); // ya esto permite agregar elementos a la tabla
@@ -157,8 +159,6 @@ public class HelloController implements Initializable {
         PromedioProyectos.setCellValueFactory(new PropertyValueFactory<Student, String>("PromedioProyectos"));
         PromedioExQT.setCellValueFactory(new PropertyValueFactory<Student, String>("PromedioExQT"));
         NotaFinal.setCellValueFactory(new PropertyValueFactory<Student, String>("NotaFinal"));
-
-
 
         Table.setItems(List);
     }
