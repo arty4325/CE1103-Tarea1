@@ -18,7 +18,7 @@ public class Student {
     private String Telefono;
     private String Tipo; // todos estos son los atributos del programa
 
-    public Student(String carne, String correo, String nikname, String nombre, String notaFinal, String promedioExQT, String promedioExamenes, String promedioQuices, String promedioTareas, String promedioProyectos, String proyecto1, String proyecto2, String proyecto3, String telefono, String tipo) {
+    public Student(String carne, String nombre, String correo, String telefono, String nikname, String tipo, String promedioExamenes, String promedioQuices, String promedioTareas, String proyecto1, String proyecto2, String proyecto3, String promedioProyectos, String promedioExQT, String notaFinal) {
         Carne = carne;
         Correo = correo;
         Nikname = nikname;
