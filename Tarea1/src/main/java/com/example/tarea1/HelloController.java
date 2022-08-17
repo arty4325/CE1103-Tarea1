@@ -21,6 +21,7 @@ import java.net.URL;
 import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
@@ -110,23 +111,45 @@ public class HelloController implements Initializable {
 
             //List.add(new Student("2022049304", "oacuna@estudiantec.cr", "arty4325", "Oscar Arturo", "77", "69","90", "80", "80", "90", " 80", "90", "80", "70769040", "A"));
             for(int i = 1; i < ListSize/12; i++){
-                List.add(new StudentA(
-                        CSV.get(12 * i),
-                        CSV.get(12 * i + 1),
-                        CSV.get(12 * i + 2),
-                        CSV.get(12 * i + 3),
-                        CSV.get(12 * i + 4),
-                        CSV.get(12 * i + 5),
-                        CSV.get(12 * i + 6),
-                        CSV.get(12 * i + 7),
-                        CSV.get(12 * i + 8),
-                        CSV.get(12 * i + 9),
-                        CSV.get(12 * i + 10),
-                        CSV.get(12 * i + 11),
-                        "NONE",
-                        "NONE",
-                        "NONE"
-                ));
+                System.out.println(CSV.get(12*i + 5));
+                if(Objects.equals(CSV.get(12 * i + 5), "A")) {
+                    List.add(new StudentA(
+                            CSV.get(12 * i),
+                            CSV.get(12 * i + 1),
+                            CSV.get(12 * i + 2),
+                            CSV.get(12 * i + 3),
+                            CSV.get(12 * i + 4),
+                            CSV.get(12 * i + 5), // tipo
+                            CSV.get(12 * i + 6),
+                            CSV.get(12 * i + 7),
+                            CSV.get(12 * i + 8),
+                            CSV.get(12 * i + 9),
+                            CSV.get(12 * i + 10),
+                            CSV.get(12 * i + 11),
+                            "NONE",
+                            "NONE",
+                            "NONE"
+                    ));
+                }
+                if(Objects.equals(CSV.get(12 * i + 5), "B")) {
+                    List.add(new StudentB(
+                            CSV.get(12 * i),
+                            CSV.get(12 * i + 1),
+                            CSV.get(12 * i + 2),
+                            CSV.get(12 * i + 3),
+                            CSV.get(12 * i + 4),
+                            CSV.get(12 * i + 5), // tipo
+                            CSV.get(12 * i + 6),
+                            CSV.get(12 * i + 7),
+                            CSV.get(12 * i + 8),
+                            CSV.get(12 * i + 9),
+                            CSV.get(12 * i + 10),
+                            CSV.get(12 * i + 11),
+                            "NONE",
+                            "NONE",
+                            "NONE"
+                    ));
+                }
             }
 
             Table.refresh(); // ya esto permite agregar elementos a la tabla

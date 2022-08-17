@@ -1,8 +1,8 @@
 package com.example.tarea1;
 
-class StudentA extends Student {
+class StudentB extends Student {
 
-    public StudentA(String carne,
+    public StudentB(String carne,
                     String nombre,
                     String correo,
                     String telefono,
@@ -24,20 +24,21 @@ class StudentA extends Student {
         //ESTA es la funcion que construye el objeto como yo quiero
         //Para esto sirve los constructores
         // Crea el objeto como yo quiero
-        //System.out.println(proyecto1);
-        //int proy = Integer.parseInt(proyecto1);
-        int examenes = Integer.parseInt(promedioExamenes);
-        int quices = Integer.parseInt(promedioQuices);
-        int tareas = Integer.parseInt(promedioTareas);
+        int proy1 = Integer.parseInt(proyecto1);
+        int proy2 = Integer.parseInt(proyecto2);
+        int proy3 = Integer.parseInt(proyecto3);
 
-        int proExQT;
-        proExQT = (examenes + quices + tareas)/3;
+        int promedioproys;
 
-        String strProExQT = String.valueOf(proExQT);
+        promedioproys = (proy1 + proy2 + proy3)/3;
 
-        PromedioProyectos = "";
-        PromedioExQT = strProExQT;
+        String strPromedioProys = String.valueOf(promedioproys);
+
+        PromedioProyectos = strPromedioProys;
+        PromedioExQT = "";
         NotaFinal = "STUDENTA";
+
+
     }
 
 
