@@ -1,1 +1,5 @@
-# CE1103-Tarea-1
+CE1103-Tarea-1
+====================================
+## Descripción de la Tarea
+La prestente aplicacion de escritorio le permite al usuario cargar un archivo CSV que contiene el reporte de notas de un grupo de estudiantes. En la interfaz se muestra en una tabla la informacion contenida en este archivo, en donde las columnas corresponden al Carné, Nombre y apellidos, Correo, Teléfono, Nickname, Tipo Estudiante, Nota Promedio (Exámenes), Nota Promedio (Quices), Nota Promedio (Tareas), Nota Proyecto #1, Nota Proyecto #2 y la Nota Proyecto #3. Además de esto, el programa muestra tres columnas mas las cuales contienen la Nota Promedio (Proyectos), la Nota Promedio (Exámenes, Quices, Tareas) y la Nota Final. 
+Existen dos tipos de estudiantes, los estudiantes tipo A y los estudiantes tipo B. En el archivo CSV se indica cual es el tipo del estudiante en la columna Tipo Estudiante. En el programa, para los estudiantes Tipo A solamente se muestra el campo de Nota Promedio (Exámenes, Quices, Tareas) y se deja en blanco el campo de Nota Promedio (Proyectos). Por otra parte, a los estudiantes Tipo B se les deja en blanco el espacio Nota Promedio (Exámenes, Quices, Tareas) y se completa el campo Nota Promedio (Proyectos)
