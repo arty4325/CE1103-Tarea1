@@ -27,6 +27,9 @@ class StudentB extends Student {
         int proy1 = Integer.parseInt(proyecto1);
         int proy2 = Integer.parseInt(proyecto2);
         int proy3 = Integer.parseInt(proyecto3);
+        int examenes = Integer.parseInt(promedioExamenes);
+        int quices = Integer.parseInt(promedioQuices);
+        int tareas = Integer.parseInt(promedioTareas);
 
         int promedioproys;
 
@@ -34,9 +37,13 @@ class StudentB extends Student {
 
         String strPromedioProys = String.valueOf(promedioproys);
 
+        int Final;
+        Final = (examenes + quices + tareas + proy1 + proy2 + proy3)/6;
+        String strFinal = String.valueOf(Final);
+
         PromedioProyectos = strPromedioProys;
         PromedioExQT = "";
-        NotaFinal = "STUDENTA";
+        NotaFinal = strFinal;
 
 
     }
