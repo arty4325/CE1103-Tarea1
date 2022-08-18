@@ -2,7 +2,12 @@ package com.example.tarea1;
 
 class StudentB extends Student {
 
-    public StudentB(String carne,
+    //En esta clase se puede ver el concepto de herencia, la clase StudentB es hija de la clase StudentA, es entonces que no se tienen que redefinir los atributos ya que estos estan
+    //en la clase padre, y no se tienen que volver a programar los "Getters"
+
+
+    public StudentB(
+                    String carne,
                     String nombre,
                     String correo,
                     String telefono,
@@ -19,11 +24,6 @@ class StudentB extends Student {
                     String notaFinal
     ){
         super(carne, nombre, correo, telefono, nikname, tipo, promedioExamenes, promedioQuices, promedioTareas, proyecto1, proyecto2, proyecto3, promedioProyectos, promedioExQT, notaFinal);
-        // Los puedo quitar del constructor y les meto un string vacio
-        // Este objeto pertenece a Student, metale estos  parametros
-        //ESTA es la funcion que construye el objeto como yo quiero
-        //Para esto sirve los constructores
-        // Crea el objeto como yo quiero
         int proy1 = Integer.parseInt(proyecto1);
         int proy2 = Integer.parseInt(proyecto2);
         int proy3 = Integer.parseInt(proyecto3);

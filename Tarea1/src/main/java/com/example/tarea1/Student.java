@@ -1,9 +1,9 @@
 package com.example.tarea1;
 
 public class Student {
-    //private, public y protected (Ligado a herencia) son maneras de encapsular, influencian como se
-    //ven los datos para otros objetos
-    protected String Carne; // En este caso solo existe en student
+    // Carne, Correo, Nikname, Nombre, NotaFinal, etc... corresponden a los atributos de la clase Student. Se sabe que los atributos son
+    // las caracteristicas que tiene un objeto, en este caso el objeto estudiante tiene carne, correo, notas, etc...
+    protected String Carne; // Se puede evidenciar el concepto de encapsulación, ya que las variables que se definen aqui solamente son accesables por las clases hijas a student, pero estan encapsuladas para otras clases como Controller
     protected String Correo;
     protected String Nikname;
     protected String Nombre;
@@ -18,7 +18,7 @@ public class Student {
     protected String Proyecto2;
     protected String Proyecto3;
     protected String Telefono;
-    protected String Tipo; // todos estos son los atributos del programa
+    protected String Tipo;
 
     public Student(String carne,
                    String nombre,

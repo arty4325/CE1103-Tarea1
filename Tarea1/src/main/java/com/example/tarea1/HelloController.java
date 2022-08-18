@@ -33,7 +33,7 @@ public class HelloController implements Initializable {
     private AnchorPane table;
 
     @FXML
-    private TableView<Student> Table; // Lo que se le dice a la tabla es que contenga estudiantes
+    private TableView<Student> Table;
 
     @FXML
     private TableColumn<Student, String> Carne;
@@ -80,7 +80,6 @@ public class HelloController implements Initializable {
     @FXML
     private TableColumn<Student, String> Tipo;
 
-
     ObservableList<Student> List = FXCollections.observableArrayList();
 
     @FXML
@@ -90,30 +89,21 @@ public class HelloController implements Initializable {
         List<String> CSV = new ArrayList<String>();
 
         if (selectedFile != null) {
-            //System.out.println(selectedFile.getAbsoluteFile());
             String path = selectedFile.getAbsolutePath();
             String line = "";
 
             BufferedReader br = new BufferedReader(new FileReader(path));
             while((line = br.readLine()) != null) {
                 String[] values = line.split(",");
-
-                //list.add(values[0]); // list contiene los valores de el archivo csv
-                //System.out.println(values[0]);
                 for(int i = 0; i < 12; i++){
                     CSV.add(values[i]);
                 }
             }
-            System.out.println(CSV);
-            System.out.println(CSV.get(12));
             int ListSize = CSV.size();
-            System.out.println(ListSize/12);
-
-            //List.add(new Student("2022049304", "oacuna@estudiantec.cr", "arty4325", "Oscar Arturo", "77", "69","90", "80", "80", "90", " 80", "90", "80", "70769040", "A"));
             for(int i = 1; i < ListSize/12; i++){
-                System.out.println(CSV.get(12*i + 5));
                 if(Objects.equals(CSV.get(12 * i + 5), "A")) {
-                    List.add(new StudentA(
+                    List.add(new StudentA( // En esta linea de codigo se puede evidenciar el concepto de instanciacion, en este caso se puede ver como se crea un Objeto Estudiante A con la
+                            // clase StudentA, y se le da un valor a los atributos en base a lo que se obtiene del archivo CSV.
                             CSV.get(12 * i),
                             CSV.get(12 * i + 1),
                             CSV.get(12 * i + 2),
@@ -152,18 +142,10 @@ public class HelloController implements Initializable {
                 }
             }
 
-            Table.refresh(); // ya esto permite agregar elementos a la tabla
-
-
-
-
+            Table.refresh();
 
         }
     }
-
-
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -182,7 +164,6 @@ public class HelloController implements Initializable {
         PromedioProyectos.setCellValueFactory(new PropertyValueFactory<Student, String>("PromedioProyectos"));
         PromedioExQT.setCellValueFactory(new PropertyValueFactory<Student, String>("PromedioExQT"));
         NotaFinal.setCellValueFactory(new PropertyValueFactory<Student, String>("NotaFinal"));
-
         Table.setItems(List);
     }
 }
