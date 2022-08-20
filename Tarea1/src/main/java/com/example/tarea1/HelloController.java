@@ -86,19 +86,9 @@ public class HelloController implements Initializable {
     public void SelectFile(MouseEvent event) throws IOException {
         FileChooser fc = new FileChooser();
         File selectedFile = fc.showOpenDialog(null);
-        List<String> CSV = new ArrayList<String>();
+        List<String> CSV;
 
-        if (selectedFile != null) {
-            String path = selectedFile.getAbsolutePath();
-            String line = "";
-
-            BufferedReader br = new BufferedReader(new FileReader(path));
-            while((line = br.readLine()) != null) {
-                String[] values = line.split(",");
-                for(int i = 0; i < 12; i++){
-                    CSV.add(values[i]);
-                }
-            }
+        CSV = TableBuilder.LoadFile(selectedFile);
             int ListSize = CSV.size();
             for(int i = 1; i < ListSize/12; i++){
                 if(Objects.equals(CSV.get(12 * i + 5), "A")) {
@@ -145,7 +135,6 @@ public class HelloController implements Initializable {
             Table.refresh();
 
         }
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
