@@ -1,6 +1,8 @@
 package com.example.tarea1;
 
 
+import javafx.collections.ObservableList;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +25,59 @@ public class TableBuilder{
         }
         return FileAsList;
     }
+
+    public static ObservableList<Student> InstanciateStudents(ObservableList<Student> List, List<String> FileAsList){
+        for(int i = 1; i < (FileAsList.size())/12; i++){
+            if(FileAsList.get(12 * i + 5).equals("A")){
+                List.add(new StudentA( // En esta linea de codigo se puede evidenciar el concepto de instanciacion, en este caso se puede ver como se crea un Objeto Estudiante A con la
+                        // clase StudentA, y se le da un valor a los atributos en base a lo que se obtiene del archivo CSV.
+                        FileAsList.get(12 * i),
+                        FileAsList.get(12 * i + 1),
+                        FileAsList.get(12 * i + 2),
+                        FileAsList.get(12 * i + 3),
+                        FileAsList.get(12 * i + 4),
+                        FileAsList.get(12 * i + 5), // tipo
+                        FileAsList.get(12 * i + 6),
+                        FileAsList.get(12 * i + 7),
+                        FileAsList.get(12 * i + 8),
+                        FileAsList.get(12 * i + 9),
+                        FileAsList.get(12 * i + 10),
+                        FileAsList.get(12 * i + 11),
+                        "NONE",
+                        "NONE",
+                        "NONE"
+                ));
+            }
+            else{
+                List.add(new StudentB( // En esta linea de codigo se puede evidenciar el concepto de instanciacion, en este caso se puede ver como se crea un Objeto Estudiante A con la
+                        // clase StudentA, y se le da un valor a los atributos en base a lo que se obtiene del archivo CSV.
+                        FileAsList.get(12 * i),
+                        FileAsList.get(12 * i + 1),
+                        FileAsList.get(12 * i + 2),
+                        FileAsList.get(12 * i + 3),
+                        FileAsList.get(12 * i + 4),
+                        FileAsList.get(12 * i + 5), // tipo
+                        FileAsList.get(12 * i + 6),
+                        FileAsList.get(12 * i + 7),
+                        FileAsList.get(12 * i + 8),
+                        FileAsList.get(12 * i + 9),
+                        FileAsList.get(12 * i + 10),
+                        FileAsList.get(12 * i + 11),
+                        "NONE",
+                        "NONE",
+                        "NONE"
+                ));
+            }
+
+
+        }
+        return List;
+    }
+
+
+
+
+
 
 
 

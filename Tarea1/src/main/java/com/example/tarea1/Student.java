@@ -51,8 +51,6 @@ public class Student {
         PromedioProyectos = promedioProyectos;
         PromedioExQT = promedioExQT;
         NotaFinal = notaFinal;
-
-
     }
 
     public String getCarne() { return Carne;}

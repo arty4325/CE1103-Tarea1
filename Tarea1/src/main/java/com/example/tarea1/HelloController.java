@@ -86,53 +86,14 @@ public class HelloController implements Initializable {
     public void SelectFile(MouseEvent event) throws IOException {
         FileChooser fc = new FileChooser();
         File selectedFile = fc.showOpenDialog(null);
-        List<String> CSV;
+        List<String> FileAsList;
+        // Insertar el Link
 
-        CSV = TableBuilder.LoadFile(selectedFile);
-            int ListSize = CSV.size();
-            for(int i = 1; i < ListSize/12; i++){
-                if(Objects.equals(CSV.get(12 * i + 5), "A")) {
-                    List.add(new StudentA( // En esta linea de codigo se puede evidenciar el concepto de instanciacion, en este caso se puede ver como se crea un Objeto Estudiante A con la
-                            // clase StudentA, y se le da un valor a los atributos en base a lo que se obtiene del archivo CSV.
-                            CSV.get(12 * i),
-                            CSV.get(12 * i + 1),
-                            CSV.get(12 * i + 2),
-                            CSV.get(12 * i + 3),
-                            CSV.get(12 * i + 4),
-                            CSV.get(12 * i + 5), // tipo
-                            CSV.get(12 * i + 6),
-                            CSV.get(12 * i + 7),
-                            CSV.get(12 * i + 8),
-                            CSV.get(12 * i + 9),
-                            CSV.get(12 * i + 10),
-                            CSV.get(12 * i + 11),
-                            "NONE",
-                            "NONE",
-                            "NONE"
-                    ));
-                }
-                if(Objects.equals(CSV.get(12 * i + 5), "B")) {
-                    List.add(new StudentB(
-                            CSV.get(12 * i),
-                            CSV.get(12 * i + 1),
-                            CSV.get(12 * i + 2),
-                            CSV.get(12 * i + 3),
-                            CSV.get(12 * i + 4),
-                            CSV.get(12 * i + 5), // tipo
-                            CSV.get(12 * i + 6),
-                            CSV.get(12 * i + 7),
-                            CSV.get(12 * i + 8),
-                            CSV.get(12 * i + 9),
-                            CSV.get(12 * i + 10),
-                            CSV.get(12 * i + 11),
-                            "NONE",
-                            "NONE",
-                            "NONE"
-                    ));
-                }
-            }
+        FileAsList = TableBuilder.LoadFile(selectedFile);
+        List = TableBuilder.InstanciateStudents(List, FileAsList);
 
-            Table.refresh();
+
+        Table.refresh();
 
         }
 
