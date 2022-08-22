@@ -1,5 +1,7 @@
 package com.example.tarea1;
 
+import java.util.OptionalDouble;
+
 public class Student {
     // Carne, Correo, Nikname, Nombre, NotaFinal, etc... corresponden a los atributos de la clase Student. Se sabe que los atributos son
     // las caracteristicas que tiene un objeto, en este caso el objeto estudiante tiene carne, correo, notas, etc...
@@ -7,13 +9,13 @@ public class Student {
     protected String Correo;
     protected String Nikname;
     protected String Nombre;
-    protected Integer NotaFinal;
-    protected Integer PromedioExQT;
+    protected Double NotaFinal;
+    protected Double PromedioExQT;
     protected Integer PromedioExamenes;
     protected Integer PromedioQuices;
     protected Integer PromedioTareas;
 
-    protected Integer PromedioProyectos;
+    protected Double PromedioProyectos;
     protected Integer Proyecto1;
     protected Integer Proyecto2;
     protected Integer Proyecto3;
@@ -32,9 +34,9 @@ public class Student {
                    Integer proyecto1,
                    Integer proyecto2,
                    Integer proyecto3,
-                   Integer promedioProyectos,
-                   Integer promedioExQT,
-                   Integer notaFinal
+                   Double promedioProyectos,
+                   Double promedioExQT,
+                   Double notaFinal
         ){
         this.Carne = carne;
         this.Correo = correo;
@@ -69,11 +71,11 @@ public class Student {
         return Nombre;
     }
 
-    public Integer getNotaFinal() {
+    public Double getNotaFinal() {
         return NotaFinal;
     }
 
-    public Integer getPromedioExQT() {
+    public Double getPromedioExQT() {
         return PromedioExQT;
     }
 
@@ -89,7 +91,7 @@ public class Student {
         return PromedioTareas;
     }
 
-    public Integer getPromedioProyectos() {
+    public Double getPromedioProyectos() {
         return PromedioProyectos;
     }
 

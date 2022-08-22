@@ -1,5 +1,7 @@
 package com.example.tarea1;
 
+import java.util.OptionalDouble;
+
 class StudentB extends Student {
 
     //En esta clase se puede ver el concepto de herencia, la clase StudentB es hija de la clase StudentA, es entonces que no se tienen que redefinir los atributos ya que estos estan
@@ -19,20 +21,21 @@ class StudentB extends Student {
                     Integer proyecto1,
                     Integer proyecto2,
                     Integer proyecto3,
-                    Integer promedioProyectos,
-                    Integer promedioExQT,
-                    Integer notaFinal
+                    Double promedioProyectos,
+                    Double promedioExQT,
+                    Double notaFinal
     ){
         super(carne, nombre, correo, telefono, nikname, tipo, promedioExamenes, promedioQuices, promedioTareas, proyecto1, proyecto2, proyecto3, promedioProyectos, promedioExQT, notaFinal);
 
-        int promedioproys;
-
-        promedioproys = (proyecto1 + proyecto2 + proyecto3)/3;
-
+        Double promedioproys;
+        promedioproys = (Calculator.Average(proyecto1, proyecto2, proyecto3)).getAsDouble();
 
 
-        int Final;
-        Final = (promedioExamenes + promedioQuices + promedioTareas + proyecto1 + proyecto2 + proyecto3)/6;
+
+        Double Final;
+        Final = (Calculator.Average(proyecto1, proyecto2, proyecto3, promedioExamenes, promedioQuices, promedioTareas)).getAsDouble();
+
+
 
 
         this.PromedioProyectos = promedioproys;

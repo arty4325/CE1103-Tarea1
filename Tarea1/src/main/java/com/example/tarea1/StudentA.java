@@ -1,5 +1,7 @@
 package com.example.tarea1;
 
+import java.util.OptionalDouble;
+
 class StudentA extends Student { // Aqui se puede evidenciar el concepto de Clase, se sabe que el concepto de clase corresponde al "Molde" que se utiliza para poder
     // instanciar un objeto, en este caso la clase StudentA es el "Molde" que permite instanciar a los estudiantes de tipo A
     // Crear dos metodos que hagan una operacion aritmetica
@@ -19,18 +21,15 @@ class StudentA extends Student { // Aqui se puede evidenciar el concepto de Clas
                     Integer proyecto1,
                     Integer proyecto2,
                     Integer proyecto3,
-                    Integer promedioProyectos,
-                    Integer promedioExQT,
-                    Integer notaFinal
+                    Double promedioProyectos,
+                    Double promedioExQT,
+                    Double notaFinal
     ){
         super(carne, nombre, correo, telefono, nikname, tipo, promedioExamenes, promedioQuices, promedioTareas, proyecto1, proyecto2, proyecto3, promedioProyectos, promedioExQT, notaFinal);
 
-        promedioExQT = (promedioExamenes + promedioQuices + promedioTareas)/3;
+        promedioExQT = (Calculator.Average(promedioExamenes, promedioQuices, promedioTareas)).getAsDouble();
 
-
-
-        notaFinal = (promedioExamenes + promedioQuices + promedioTareas + proyecto1 + proyecto2 + proyecto3)/6;
-
+        notaFinal = (Calculator.Average(proyecto1, proyecto2, proyecto3, promedioExamenes, promedioQuices, promedioTareas)).getAsDouble();
 
         this.PromedioProyectos = null;
         this.PromedioExQT = promedioExQT;

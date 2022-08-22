@@ -2,7 +2,6 @@
 
 
 import javafx.collections.ObservableList;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -67,7 +66,7 @@ import java.util.Objects;
             ));
 
         }if(Counter < (FileAsList.size() - 12)){
-            return InstanciateStudents(List, FileAsList, Counter + 12);
+            return InstanciateStudents(List, FileAsList, Counter + 12); // Recursividad de Cola
         } else{
             return List;}
         }

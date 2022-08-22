@@ -19,10 +19,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.net.URL;
 import java.nio.Buffer;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class HelloController implements Initializable {
 
@@ -88,11 +85,8 @@ public class HelloController implements Initializable {
         File selectedFile = fc.showOpenDialog(null);
         List<String> FileAsList;
         // Insertar el Link
-
         FileAsList = TableBuilder.LoadFile(selectedFile);
         List = TableBuilder.InstanciateStudents(List, FileAsList, 12);
-
-
         Table.refresh();
 
         }
