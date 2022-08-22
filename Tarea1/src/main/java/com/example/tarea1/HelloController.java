@@ -90,7 +90,7 @@ public class HelloController implements Initializable {
         // Insertar el Link
 
         FileAsList = TableBuilder.LoadFile(selectedFile);
-        List = TableBuilder.InstanciateStudents(List, FileAsList);
+        List = TableBuilder.InstanciateStudents(List, FileAsList, 12);
 
 
         Table.refresh();

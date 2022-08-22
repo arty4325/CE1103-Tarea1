@@ -1,4 +1,4 @@
-package com.example.tarea1;
+  package com.example.tarea1;
 
 
 import javafx.collections.ObservableList;
@@ -7,8 +7,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
-public class TableBuilder{
+  public class TableBuilder{
     public static List<String> LoadFile(File LoadedPath) throws IOException{
         List<String> FileAsList = new ArrayList<String>();
 
@@ -26,52 +27,50 @@ public class TableBuilder{
         return FileAsList;
     }
 
-    public static ObservableList<Student> InstanciateStudents(ObservableList<Student> List, List<String> FileAsList){
-        for(int i = 1; i < (FileAsList.size())/12; i++){
-            if(FileAsList.get(12 * i + 5).equals("A")){
-                List.add(new StudentA( // En esta linea de codigo se puede evidenciar el concepto de instanciacion, en este caso se puede ver como se crea un Objeto Estudiante A con la
-                        // clase StudentA, y se le da un valor a los atributos en base a lo que se obtiene del archivo CSV.
-                        FileAsList.get(12 * i),
-                        FileAsList.get(12 * i + 1),
-                        FileAsList.get(12 * i + 2),
-                        FileAsList.get(12 * i + 3),
-                        FileAsList.get(12 * i + 4),
-                        FileAsList.get(12 * i + 5), // tipo
-                        Integer.parseInt(FileAsList.get(12 * i + 6)),
-                        Integer.parseInt(FileAsList.get(12 * i + 7)),
-                        Integer.parseInt(FileAsList.get(12 * i + 8)),
-                        Integer.parseInt(FileAsList.get(12 * i + 9)),
-                        Integer.parseInt(FileAsList.get(12 * i + 10)),
-                        Integer.parseInt(FileAsList.get(12 * i + 11)),
-                        null,
-                        null,
-                        null
-                ));
-            }
-            else{
-                List.add(new StudentB( // En esta linea de codigo se puede evidenciar el concepto de instanciacion, en este caso se puede ver como se crea un Objeto Estudiante A con la
-                        // clase StudentA, y se le da un valor a los atributos en base a lo que se obtiene del archivo CSV.
-                        FileAsList.get(12 * i),
-                        FileAsList.get(12 * i + 1),
-                        FileAsList.get(12 * i + 2),
-                        FileAsList.get(12 * i + 3),
-                        FileAsList.get(12 * i + 4),
-                        FileAsList.get(12 * i + 5), // tipo
-                        Integer.parseInt(FileAsList.get(12 * i + 6)),
-                        Integer.parseInt(FileAsList.get(12 * i + 7)),
-                        Integer.parseInt(FileAsList.get(12 * i + 8)),
-                        Integer.parseInt(FileAsList.get(12 * i + 9)),
-                        Integer.parseInt(FileAsList.get(12 * i + 10)),
-                        Integer.parseInt(FileAsList.get(12 * i + 11)),
-                        null,
-                        null,
-                        null
-                ));
-            }
+    public static ObservableList<Student> InstanciateStudents(ObservableList<Student> List, List<String> FileAsList, int Counter){
 
+        if (Objects.equals(FileAsList.get(Counter + 5), "A")) {
+            List.add(new StudentA(
+                    FileAsList.get(Counter),
+                    FileAsList.get(Counter + 1),
+                    FileAsList.get(Counter + 2),
+                    FileAsList.get(Counter + 3),
+                    FileAsList.get(Counter + 4),
+                    FileAsList.get(Counter + 5), // tipo
+                    Integer.parseInt(FileAsList.get(Counter + 6)),
+                    Integer.parseInt(FileAsList.get(Counter + 7)),
+                    Integer.parseInt(FileAsList.get(Counter + 8)),
+                    Integer.parseInt(FileAsList.get(Counter + 9)),
+                    Integer.parseInt(FileAsList.get(Counter + 10)),
+                    Integer.parseInt(FileAsList.get(Counter + 11)),
+                    null,
+                    null,
+                    null
+            ));
+        } else {
+            List.add(new StudentB(
+                    FileAsList.get(Counter),
+                    FileAsList.get(Counter + 1),
+                    FileAsList.get(Counter + 2),
+                    FileAsList.get(Counter + 3),
+                    FileAsList.get(Counter + 4),
+                    FileAsList.get(Counter + 5), // tipo
+                    Integer.parseInt(FileAsList.get(Counter + 6)),
+                    Integer.parseInt(FileAsList.get(Counter + 7)),
+                    Integer.parseInt(FileAsList.get(Counter + 8)),
+                    Integer.parseInt(FileAsList.get(Counter + 9)),
+                    Integer.parseInt(FileAsList.get(Counter + 10)),
+                    Integer.parseInt(FileAsList.get(Counter + 11)),
+                    null,
+                    null,
+                    null
+            ));
 
+        }if(Counter < (FileAsList.size() - 12)){
+            return InstanciateStudents(List, FileAsList, Counter + 12);
+        } else{
+            return List;}
         }
-        return List;
     }
 
 
@@ -82,4 +81,4 @@ public class TableBuilder{
 
 
 
-}
+
