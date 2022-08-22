@@ -7,16 +7,16 @@ public class Student {
     protected String Correo;
     protected String Nikname;
     protected String Nombre;
-    protected String NotaFinal;
-    protected String PromedioExQT;
-    protected String PromedioExamenes;
-    protected String PromedioQuices;
-    protected String PromedioTareas;
+    protected Integer NotaFinal;
+    protected Integer PromedioExQT;
+    protected Integer PromedioExamenes;
+    protected Integer PromedioQuices;
+    protected Integer PromedioTareas;
 
-    protected String PromedioProyectos;
-    protected String Proyecto1;
-    protected String Proyecto2;
-    protected String Proyecto3;
+    protected Integer PromedioProyectos;
+    protected Integer Proyecto1;
+    protected Integer Proyecto2;
+    protected Integer Proyecto3;
     protected String Telefono;
     protected String Tipo;
 
@@ -26,48 +26,92 @@ public class Student {
                    String telefono,
                    String nikname,
                    String tipo,
-                   String promedioExamenes,
-                   String promedioQuices,
-                   String promedioTareas,
-                   String proyecto1,
-                   String proyecto2,
-                   String proyecto3,
-                   String promedioProyectos,
-                   String promedioExQT,
-                   String notaFinal
+                   Integer promedioExamenes,
+                   Integer promedioQuices,
+                   Integer promedioTareas,
+                   Integer proyecto1,
+                   Integer proyecto2,
+                   Integer proyecto3,
+                   Integer promedioProyectos,
+                   Integer promedioExQT,
+                   Integer notaFinal
         ){
-        Carne = carne;
-        Correo = correo;
-        Nikname = nikname;
-        Nombre = nombre;
-        PromedioExamenes = promedioExamenes;
-        PromedioQuices = promedioQuices;
-        PromedioTareas = promedioTareas;
-        Proyecto1 = proyecto1;
-        Proyecto2 = proyecto2;
-        Proyecto3 = proyecto3;
-        Telefono = telefono;
-        Tipo = tipo;
-        PromedioProyectos = promedioProyectos;
-        PromedioExQT = promedioExQT;
-        NotaFinal = notaFinal;
+        this.Carne = carne;
+        this.Correo = correo;
+        this.Nikname = nikname;
+        this.Nombre = nombre;
+        this.PromedioExamenes = promedioExamenes;
+        this.PromedioQuices = promedioQuices;
+        this.PromedioTareas = promedioTareas;
+        this.Proyecto1 = proyecto1;
+        this.Proyecto2 = proyecto2;
+        this.Proyecto3 = proyecto3;
+        this.Telefono = telefono;
+        this.Tipo = tipo;
+        this.PromedioProyectos = promedioProyectos;
+        this.PromedioExQT = promedioExQT;
+        this.NotaFinal = notaFinal;
     }
 
-    public String getCarne() { return Carne;}
-    public String getCorreo() {return Correo;}
-    public String getNikname() {return Nikname;}
-    public String getNombre() {return Nombre;}
-    public String getNotaFinal() {return NotaFinal;}
-    public String getPromedioExQT() {return PromedioExQT;}
-    public String getPromedioExamenes() {return PromedioExamenes;}
-    public String getPromedioQuices() { return PromedioQuices;}
-    public String getPromedioTareas() {return PromedioTareas;}
-    public String getPromedioProyectos() {return PromedioProyectos;}
-    public String getProyecto1() {return Proyecto1;}
-    public String getProyecto2() {return Proyecto2;}
-    public String getProyecto3() {return Proyecto3;}
-    public String getTelefono() {return Telefono;}
-    public String getTipo() {return Tipo;}
+    public String getCarne() {
+        return Carne;
+    }
+
+    public String getCorreo() {
+        return Correo;
+    }
+
+    public String getNikname() {
+        return Nikname;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public Integer getNotaFinal() {
+        return NotaFinal;
+    }
+
+    public Integer getPromedioExQT() {
+        return PromedioExQT;
+    }
+
+    public Integer getPromedioExamenes() {
+        return PromedioExamenes;
+    }
+
+    public Integer getPromedioQuices() {
+        return PromedioQuices;
+    }
+
+    public Integer getPromedioTareas() {
+        return PromedioTareas;
+    }
+
+    public Integer getPromedioProyectos() {
+        return PromedioProyectos;
+    }
+
+    public Integer getProyecto1() {
+        return Proyecto1;
+    }
+
+    public Integer getProyecto2() {
+        return Proyecto2;
+    }
+
+    public Integer getProyecto3() {
+        return Proyecto3;
+    }
+
+    public String getTelefono() {
+        return Telefono;
+    }
+
+    public String getTipo() {
+        return Tipo;
+    }
 }
 
 

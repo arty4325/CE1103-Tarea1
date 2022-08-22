@@ -37,15 +37,15 @@ public class TableBuilder{
                         FileAsList.get(12 * i + 3),
                         FileAsList.get(12 * i + 4),
                         FileAsList.get(12 * i + 5), // tipo
-                        FileAsList.get(12 * i + 6),
-                        FileAsList.get(12 * i + 7),
-                        FileAsList.get(12 * i + 8),
-                        FileAsList.get(12 * i + 9),
-                        FileAsList.get(12 * i + 10),
-                        FileAsList.get(12 * i + 11),
-                        "NONE",
-                        "NONE",
-                        "NONE"
+                        Integer.parseInt(FileAsList.get(12 * i + 6)),
+                        Integer.parseInt(FileAsList.get(12 * i + 7)),
+                        Integer.parseInt(FileAsList.get(12 * i + 8)),
+                        Integer.parseInt(FileAsList.get(12 * i + 9)),
+                        Integer.parseInt(FileAsList.get(12 * i + 10)),
+                        Integer.parseInt(FileAsList.get(12 * i + 11)),
+                        null,
+                        null,
+                        null
                 ));
             }
             else{
@@ -57,15 +57,15 @@ public class TableBuilder{
                         FileAsList.get(12 * i + 3),
                         FileAsList.get(12 * i + 4),
                         FileAsList.get(12 * i + 5), // tipo
-                        FileAsList.get(12 * i + 6),
-                        FileAsList.get(12 * i + 7),
-                        FileAsList.get(12 * i + 8),
-                        FileAsList.get(12 * i + 9),
-                        FileAsList.get(12 * i + 10),
-                        FileAsList.get(12 * i + 11),
-                        "NONE",
-                        "NONE",
-                        "NONE"
+                        Integer.parseInt(FileAsList.get(12 * i + 6)),
+                        Integer.parseInt(FileAsList.get(12 * i + 7)),
+                        Integer.parseInt(FileAsList.get(12 * i + 8)),
+                        Integer.parseInt(FileAsList.get(12 * i + 9)),
+                        Integer.parseInt(FileAsList.get(12 * i + 10)),
+                        Integer.parseInt(FileAsList.get(12 * i + 11)),
+                        null,
+                        null,
+                        null
                 ));
             }
 
