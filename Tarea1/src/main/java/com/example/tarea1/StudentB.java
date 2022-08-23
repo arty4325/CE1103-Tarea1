@@ -32,10 +32,10 @@ class StudentB extends Student {
         super(carne, nombre, correo, telefono, nikname, tipo, promedioExamenes, promedioQuices, promedioTareas, proyecto1, proyecto2, proyecto3, promedioProyectos, promedioExQT, notaFinal);
 
         Double promedioproys;
-        promedioproys = (Calculator.Average(proyecto1, proyecto2, proyecto3)).getAsDouble();
+        promedioproys = (Calculator.Average(proyecto1, proyecto2, proyecto3)).getAsDouble(); // Ocurre Instanciacion
 
         Double Final;
-        Final = (Calculator.Average(proyecto1, proyecto2, proyecto3, promedioExamenes, promedioQuices, promedioTareas)).getAsDouble();
+        Final = (Calculator.Average(proyecto1, proyecto2, proyecto3, promedioExamenes, promedioQuices, promedioTareas)).getAsDouble(); // Ocurre Instanciacion
 
         this.PromedioProyectos = promedioproys;
         this.PromedioExQT = null;

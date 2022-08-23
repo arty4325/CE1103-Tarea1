@@ -91,6 +91,7 @@ public class Controller implements Initializable {
         FileChooser fc = new FileChooser();
         File selectedFile = fc.showOpenDialog(null);
         List<String> FileAsList;
+        // Se puede evidenciar el concepto de instanciacion cuando se llama al metodo LoadFile y al metodo InstanciateStudents
         FileAsList = TableBuilder.LoadFile(selectedFile);
         List = TableBuilder.InstanciateStudents(List, FileAsList, 12);
         Table.refresh(); // Se tiene que refrescar toda La tabla

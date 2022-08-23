@@ -41,6 +41,8 @@ public class Calculator {
      * @author Oscar Arturo Acuna Duran 2022049304
      */
     public static OptionalDouble Average(Integer Proyecto1, Integer Proyecto2, Integer Proyecto3, Integer PromedioExamenes, Integer PromedioQuices, Integer PromedioTareas){
+        // Se puede evidenciar el concepto metodos, ya que en la clase Calculator se tiene el Metodo Averate que ejecuta la operacion matematica de promedio
+
         // Informacion obtenida de https://www.tutorialspoint.com/intstream-average-method-in-java
         IntStream AllAverage = IntStream.of(Proyecto1, Proyecto2, Proyecto3, PromedioExamenes, PromedioQuices, PromedioTareas);
         OptionalDouble ReturnableAvg = AllAverage.average();
