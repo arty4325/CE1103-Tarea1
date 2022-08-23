@@ -5,10 +5,10 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1131.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea1.HelloController">
+<AnchorPane fx:id="table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea1.Controller">
    <children>
-      <Button fx:id="btn1" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#SelectFile" text="SelectFile" />
-      <TableView fx:id="Table" layoutX="25.0" layoutY="65.0" prefHeight="605.0" prefWidth="1080.0">
+      <Button fx:id="btn1" layoutX="58.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#SelectFile" text="SelectFile" />
+      <TableView fx:id="Table" layoutX="58.0" layoutY="98.0" prefHeight="605.0" prefWidth="1084.0">
         <columns>
           <TableColumn fx:id="Carne" prefWidth="53.0" text="Carné" />
           <TableColumn fx:id="Nombre" prefWidth="56.0" text="Nombre" />

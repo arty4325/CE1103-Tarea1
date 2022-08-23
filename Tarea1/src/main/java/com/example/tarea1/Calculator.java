@@ -22,6 +22,8 @@ public class Calculator {
         // Distintas funciones dependiendo de los parametros, en este caso se puede evidenciar esto ya que
         // La Clase Calculator tiene dos Metodos Average que se utilizan dependiendo de
         // La cantidad de parametros que se le den
+
+        //Informacion Obtenida de https://www.tutorialspoint.com/intstream-average-method-in-java
         IntStream ValsAverage = IntStream.of(Val1, Val2, Val3);
         OptionalDouble ReturnableAvg = ValsAverage.average();
         return ReturnableAvg;
@@ -39,6 +41,7 @@ public class Calculator {
      * @author Oscar Arturo Acuna Duran 2022049304
      */
     public static OptionalDouble Average(Integer Proyecto1, Integer Proyecto2, Integer Proyecto3, Integer PromedioExamenes, Integer PromedioQuices, Integer PromedioTareas){
+        // Informacion obtenida de https://www.tutorialspoint.com/intstream-average-method-in-java
         IntStream AllAverage = IntStream.of(Proyecto1, Proyecto2, Proyecto3, PromedioExamenes, PromedioQuices, PromedioTareas);
         OptionalDouble ReturnableAvg = AllAverage.average();
         return ReturnableAvg;

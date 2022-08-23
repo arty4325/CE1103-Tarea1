@@ -1,7 +1,6 @@
 package com.example.tarea1;
 import java.io.*;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -14,18 +13,15 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.net.URL;
-import java.nio.Buffer;
 import java.util.*;
 
 /**
  * Esta clase controla lo que ocurre con los items que aparecen en la pantalla de JavaFX, tanto con la Tabla como con el Boton
  * @author Oscar Arturo Acuna Duran 2022049304
  */
-public class HelloController implements Initializable {
+public class Controller implements Initializable {
     // En los siguientes atributos se puede ver el concepto de encapsulacion, ya que estos estan protegidos por la clase
     @FXML
     private Button btn1;
@@ -92,13 +88,15 @@ public class HelloController implements Initializable {
      */
     @FXML
     public void SelectFile(MouseEvent event) throws IOException {
+        // Esto ejecuta la Interfaz
+        // Es un claro ejemplo de Encapsulacion, ya que se le esconde al usuario el acceso a los metodos y los atributos mediante
+        // Esta interfaz grafica
         FileChooser fc = new FileChooser();
         File selectedFile = fc.showOpenDialog(null);
         List<String> FileAsList;
         FileAsList = TableBuilder.LoadFile(selectedFile);
         List = TableBuilder.InstanciateStudents(List, FileAsList, 12);
-        Table.refresh();
-
+        Table.refresh(); // Se tiene que refrescar toda La tabla
         }
 
 
@@ -124,6 +122,6 @@ public class HelloController implements Initializable {
         PromedioProyectos.setCellValueFactory(new PropertyValueFactory<Student, String>("PromedioProyectos"));
         PromedioExQT.setCellValueFactory(new PropertyValueFactory<Student, String>("PromedioExQT"));
         NotaFinal.setCellValueFactory(new PropertyValueFactory<Student, String>("NotaFinal"));
-        Table.setItems(List);
+        Table.setItems(List); // Esto lo que hace es colocar los elementos que estan en List en el Table
     }
 }

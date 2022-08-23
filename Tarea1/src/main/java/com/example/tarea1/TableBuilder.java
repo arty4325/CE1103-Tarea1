@@ -22,6 +22,8 @@ import java.util.Objects;
        * @author Alex Lee <a href="https://youtu.be/-Aud0cDh-J8">...</a> y Arturo Acuna Duran 2022049304
        */
     public static List<String> LoadFile(File LoadedPath) throws IOException{
+        // Autoria: Alex Lee https://youtu.be/-Aud0cDh-J8 y Arturo Acuna Duran 2022049304
+
         // Se puede evidenciar el concepto de Metodo, recuerdese que un metodo es una capacidad que tiene el objeto, una accion
         // En este caso, el Objeto TableBulder tiene la capacidad de cargar archivos CSV, eso es lo que se programo en este metodo
         List<String> FileAsList = new ArrayList<String>();
@@ -51,6 +53,7 @@ import java.util.Objects;
        * @author Arturo Acuna Duran 2022049304 y Random Code <a href="https://youtu.be/fnU1AlyuguE">...</a>
        */
     public static ObservableList<Student> InstanciateStudents(ObservableList<Student> List, List<String> FileAsList, int Counter){
+        // Autoria: Arturo Acuna Duran 2022049304 y Random Code https://youtu.be/fnU1AlyuguE
         if (Objects.equals(FileAsList.get(Counter + 5), "A")) {
             // Se puede evidenciar el concepto de instanicacion, recuerdese que instanciar consiste en el uso de una clase para poder crear un Objeto, en
             // Este caso se esta haciendo uso de StudentA y StudentB para crear objetos Estudiante que tengan como atributos lo que se cargo en el archivo CSV
