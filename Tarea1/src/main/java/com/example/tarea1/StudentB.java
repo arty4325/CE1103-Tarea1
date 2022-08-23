@@ -1,6 +1,5 @@
 package com.example.tarea1;
 
-import java.util.OptionalDouble;
 
 /**
  * Clase StudentA, se encarga de llamar a los debidos metodos en Calculator para obtener los promedios solicitados y despues ejecutar el programa

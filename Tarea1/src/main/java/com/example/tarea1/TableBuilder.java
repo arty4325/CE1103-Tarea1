@@ -28,6 +28,10 @@ import java.util.Objects;
         // En este caso, el Objeto TableBulder tiene la capacidad de cargar archivos CSV, eso es lo que se programo en este metodo
         List<String> FileAsList = new ArrayList<String>();
 
+        // Se puede observar el termino de Polimorfismo, recuerdese que el polimorfismo consiste en tratar dos objetos como el mismo
+        // En este caso el objeto LoadedPath n es el mismo que line, sin embargo se hace la misma comparacion cuando se dice que
+        // LoadedPath != null y (line = br.readline()) != null
+        // Es ahi donde se comprende el Polimorfismo
         if(LoadedPath != null){
             String PathDirection = LoadedPath.getAbsolutePath();
             String line = "";
@@ -58,8 +62,6 @@ import java.util.Objects;
             // Se puede evidenciar el concepto de instanicacion, recuerdese que instanciar consiste en el uso de una clase para poder crear un Objeto, en
             // Este caso se esta haciendo uso de StudentA y StudentB para crear objetos Estudiante que tengan como atributos lo que se cargo en el archivo CSV
             List.add(new StudentA(
-                    // Se puede evidenciar el Polimorfismo, observese como StudentA se instancia de manera distinta dependiendo de los parametros que se le den a este
-                    // Un solo objeto tiene varias formas.
                     FileAsList.get(Counter),
                     FileAsList.get(Counter + 1),
                     FileAsList.get(Counter + 2),
@@ -72,7 +74,7 @@ import java.util.Objects;
                     Integer.parseInt(FileAsList.get(Counter + 9)),
                     Integer.parseInt(FileAsList.get(Counter + 10)),
                     Integer.parseInt(FileAsList.get(Counter + 11)),
-                    null, // Se puede comprender el concepto de sobreescritura, ya que estos parametros seran sobreescritos en la instanciacion de StudentA
+                    null,
                     null,
                     null
             ));

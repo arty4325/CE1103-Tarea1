@@ -1,6 +1,5 @@
 package com.example.tarea1;
 
-import java.util.OptionalDouble;
 
 /**
  * Clase StudentA, se encarga de llamar a los debidos metodos en Calculator para obtener los promedios solicitados y despues ejecutar el programa
@@ -30,9 +29,9 @@ class StudentA extends Student {
         super(carne, nombre, correo, telefono, nikname, tipo, promedioExamenes, promedioQuices, promedioTareas, proyecto1, proyecto2, proyecto3, promedioProyectos, promedioExQT, notaFinal);
 
         promedioExQT = (Calculator.Average(promedioExamenes, promedioQuices, promedioTareas)).getAsDouble();
-
         notaFinal = (Calculator.Average(proyecto1, proyecto2, proyecto3, promedioExamenes, promedioQuices, promedioTareas)).getAsDouble();
 
+        // Se puede ver el concepto de Sobreescritura ya que lo que se instancio ne TableBuilder se cambia en la Clase heredada StudentA
         this.PromedioProyectos = null;
         this.PromedioExQT = promedioExQT;
         this.NotaFinal = notaFinal;

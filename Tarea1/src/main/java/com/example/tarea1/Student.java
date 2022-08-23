@@ -1,6 +1,5 @@
 package com.example.tarea1;
 
-import java.util.OptionalDouble;
 
 /**
  * La presente Super Clase unicamente contiene la definicion de los elementos que aparecen en la tabla, el Constructor y los Getters
@@ -8,7 +7,11 @@ import java.util.OptionalDouble;
  * @author Arturo Acuna Duran 2022049304
  */
 public class Student {
-    // Se puede evidenciar el concepto de Clase, recuerdese que desde un punto de vista interpretativo la Clase es el "Molde" que se utiliza para poder
+    // Evidencia del concepto de Abstraccion, en la realidad existe el objeto y la idea del Objeto (Una idea muy Platonica), La abstraccion
+    // Consiste en ese paso entre el objeto y la idea, en este caso existen los estudiantes y la idea del estudiante, ese proceso abstracto se
+    // Da en la presente clase, teniendo un claro ejemplo de Abstaccion.
+
+    // Se puede evidenciar el concepto de Clase, recuerdese que desde un punto de vista conceptual la Clase es el "Molde" que se utiliza para poder
     // Crear o Intanciar los objetos, en este cacso la clase Student es el molde con el cual se pueden instanciar los estudiantes y sus distintos atributos
     protected String Carne; // Se puede evidenciar el concepto de encapsulación, ya que las variables que se definen aqui solamente son accesables por las clases hijas a student, pero estan encapsuladas para otras clases como Controller
     protected String Correo; // Ademas se puede ver el concepto de Atributos, ya que el Objeto Estudiante tiene la cualidad de tener Carne, Correo, Nikname, etc...
@@ -27,9 +30,7 @@ public class Student {
     protected String Telefono;
     protected String Tipo;
 
-    public Student( // En la clase Student se puede compernder el concepto de Abstraccion, ya que se esta abstrayendo el estudiante
-                    // mediante esta clase, un estudiante tiene mas atributos que los que esta clase describe, sin embargo
-                    // Eso es por que el objeto Estudiante es una abtraccion de un estudiante, es la idea de un estudiante, no un estudiante
+    public Student(
                    String carne,
                    String nombre,
                    String correo,

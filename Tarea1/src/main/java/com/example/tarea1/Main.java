@@ -19,6 +19,8 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
+        // Aqui se hace la ejecucion de la Interfaz, este es un ejemplo de encapsulamiento ya que
+        // Esconde los atributos y metodos del programa mediante lo que la interfaz permite
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 800);
         stage.setTitle("CSV loader");

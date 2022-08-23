@@ -88,9 +88,6 @@ public class Controller implements Initializable {
      */
     @FXML
     public void SelectFile(MouseEvent event) throws IOException {
-        // Esto ejecuta la Interfaz
-        // Es un claro ejemplo de Encapsulacion, ya que se le esconde al usuario el acceso a los metodos y los atributos mediante
-        // Esta interfaz grafica
         FileChooser fc = new FileChooser();
         File selectedFile = fc.showOpenDialog(null);
         List<String> FileAsList;
