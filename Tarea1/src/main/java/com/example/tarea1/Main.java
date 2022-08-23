@@ -7,8 +7,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
+/**
+ * Funcion que ejecuta la ventana de JavaFX
+ * @author JavaFX
+ */
 public class Main extends Application {
+    /**
+     * Funcion que genera la ventana y el lienzo
+     * @param stage Conceptualizacion de la ventana
+     * @author JavaFX
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
@@ -18,5 +26,9 @@ public class Main extends Application {
         stage.show();
     }
 
+    /**
+     * Funcion que corre el programa
+     * @param args El argumento de entrada
+     */
     public static void main(String[] args) {launch();}
 }

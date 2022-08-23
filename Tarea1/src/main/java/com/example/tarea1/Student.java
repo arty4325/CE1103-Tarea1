@@ -2,6 +2,11 @@ package com.example.tarea1;
 
 import java.util.OptionalDouble;
 
+/**
+ * La presente Super Clase unicamente contiene la definicion de los elementos que aparecen en la tabla, el Constructor y los Getters
+ * Esto se hereda en las clases StudentA y StudentB
+ * @author Arturo Acuna Duran 2022049304
+ */
 public class Student {
     // Carne, Correo, Nikname, Nombre, NotaFinal, etc... corresponden a los atributos de la clase Student. Se sabe que los atributos son
     // las caracteristicas que tiene un objeto, en este caso el objeto estudiante tiene carne, correo, notas, etc...
@@ -54,6 +59,7 @@ public class Student {
         this.PromedioExQT = promedioExQT;
         this.NotaFinal = notaFinal;
     }
+
 
     public String getCarne() {
         return Carne;

@@ -2,13 +2,14 @@ package com.example.tarea1;
 
 import java.util.OptionalDouble;
 
-class StudentA extends Student { // Aqui se puede evidenciar el concepto de Clase, se sabe que el concepto de clase corresponde al "Molde" que se utiliza para poder
-    // instanciar un objeto, en este caso la clase StudentA es el "Molde" que permite instanciar a los estudiantes de tipo A
-    // Crear dos metodos que hagan una operacion aritmetica
-    // Cuando se les mete en la tabla que funcione la vara bien
+/**
+ * Clase StudentA, se encarga de llamar a los debidos metodos en Calculator para obtener los promedios solicitados y despues ejecutar el programa
+ * Es hija de Student
+ * @author Arturo Acuna Duran 2022049304
+ */
+class StudentA extends Student {
 
-    public StudentA(  // En el presente constructor se puede evidenciar el concepto de métodos, ya que el Objeto StudentA tiene la capacidad de calcular las notas promedio de
-                      // los estudiantes, esta capacidad se puede ver evidenciada en las formulas que se ejecutan antes del output
+    public StudentA(
                     String carne,
                     String nombre,
                     String correo,
@@ -17,7 +18,7 @@ class StudentA extends Student { // Aqui se puede evidenciar el concepto de Clas
                     String tipo,
                     Integer promedioExamenes,
                     Integer promedioQuices,
-                    Integer promedioTareas, // Se puede castear, obligar el dato a ser de un tipo (Tipo)
+                    Integer promedioTareas,
                     Integer proyecto1,
                     Integer proyecto2,
                     Integer proyecto3,

@@ -2,6 +2,11 @@ package com.example.tarea1;
 
 import java.util.OptionalDouble;
 
+/**
+ * Clase StudentA, se encarga de llamar a los debidos metodos en Calculator para obtener los promedios solicitados y despues ejecutar el programa
+ * Es hija de Student
+ * @author Arturo Acuna Duran 2022049304
+ */
 class StudentB extends Student {
 
     //En esta clase se puede ver el concepto de herencia, la clase StudentB es hija de la clase StudentA, es entonces que no se tienen que redefinir los atributos ya que estos estan
@@ -30,13 +35,8 @@ class StudentB extends Student {
         Double promedioproys;
         promedioproys = (Calculator.Average(proyecto1, proyecto2, proyecto3)).getAsDouble();
 
-
-
         Double Final;
         Final = (Calculator.Average(proyecto1, proyecto2, proyecto3, promedioExamenes, promedioQuices, promedioTareas)).getAsDouble();
-
-
-
 
         this.PromedioProyectos = promedioproys;
         this.PromedioExQT = null;

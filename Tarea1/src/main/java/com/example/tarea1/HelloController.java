@@ -21,6 +21,10 @@ import java.net.URL;
 import java.nio.Buffer;
 import java.util.*;
 
+/**
+ * Esta clase controla lo que ocurre con los items que aparecen en la pantalla de JavaFX, tanto con la Tabla como con el Boton
+ * @author Oscar Arturo Acuna Duran 2022049304
+ */
 public class HelloController implements Initializable {
 
     @FXML
@@ -79,6 +83,13 @@ public class HelloController implements Initializable {
 
     ObservableList<Student> List = FXCollections.observableArrayList();
 
+    /**
+     * Esta clase es lo que se ejecuta cuando se presiona el boton
+     * Lo que hace es cargar el buscador de archivos, crear una lista de string y poner los elementos del CSV en ella.
+     * Y por ultimo instanciar la clase Student para despues colocarla en un Observable list que se despliega en la Tabla
+     * @param event El evento de estripar el boton
+     * @author Oscar Arturo Acuna Duran 2022049304
+     */
     @FXML
     public void SelectFile(MouseEvent event) throws IOException {
         FileChooser fc = new FileChooser();
@@ -91,6 +102,12 @@ public class HelloController implements Initializable {
 
         }
 
+
+    /**
+     * La presente clase es la inicializacion de lo que aparece en el Tablero, primero carga manualmente cada uno de los titulos, y despues
+     * Coloca los elementos que se instanciaron en List en la Tabla, eso en la linea de codigo Table.setItems(List);
+     * @author Oscar Arturo Acuna Duran 2022049304
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
         Carne.setCellValueFactory(new PropertyValueFactory<Student, String>("Carne"));

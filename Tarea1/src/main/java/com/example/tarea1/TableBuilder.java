@@ -8,7 +8,19 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+  /**
+   * Esta clase tiene dos metodos, el primer metodo es el encargado de cargar el archivo CSV y meter cada elemento en una Lista
+   * El segundo metodo Lo que hace es instanciar Student y meterlo en una ObservableList
+   * @author Oscar Arturo Acuna Duran 2022049304
+   */
   public class TableBuilder{
+      /**
+       * La presente funcion lo que hacce es cargar un archivo CSV en una Lista de Strings dentro de Java
+       * El codigo toma muchos elementos de un video de Alex Lee en Youtube, con ciertas modificaciones realizadas por Arturo Acuna
+       * @param LoadedPath Esta es la ubicacion de la computadora en donde se puede encontar el
+       * @return FileAsList este es el archivo CSV ya cargado en la Lista de Java
+       * @author Alex Lee <a href="https://youtu.be/-Aud0cDh-J8">...</a> y Arturo Acuna Duran 2022049304
+       */
     public static List<String> LoadFile(File LoadedPath) throws IOException{
         List<String> FileAsList = new ArrayList<String>();
 
@@ -26,8 +38,17 @@ import java.util.Objects;
         return FileAsList;
     }
 
+      /**
+       * Este metodo lo que hace es cargar las instanciaciones de Student en una ObservableList para despues desplegarlas en el tablero
+       * El codigo tiene una alta inspiracion en lo que aparece en un video de Random Code en youtube, pero tiene muchos elementos
+       * Programados por Arturo Acuna
+       * @param List Este paramtetro Lista es la misma lista que despues se va a retornar con las instanciaciones de Student Cargadas
+       * @param FileAsList Esta Lista contiene los elementos del archivo CSV pero cargados en ella como datos independientes
+       * @param Counter Este contador permite realizar la recursividad de pila con la cual se ejecuta la repeticion de codigo
+       * @return Retorna la Lista con las instanciaciones de Student
+       * @author Arturo Acuna Duran 2022049304 y Random Code <a href="https://youtu.be/fnU1AlyuguE">...</a>
+       */
     public static ObservableList<Student> InstanciateStudents(ObservableList<Student> List, List<String> FileAsList, int Counter){
-
         if (Objects.equals(FileAsList.get(Counter + 5), "A")) {
             List.add(new StudentA(
                     FileAsList.get(Counter),
