@@ -1,4 +1,4 @@
-  package com.example.tarea1;
+package com.example.tarea1;
 
 
 import javafx.collections.ObservableList;
@@ -22,6 +22,8 @@ import java.util.Objects;
        * @author Alex Lee <a href="https://youtu.be/-Aud0cDh-J8">...</a> y Arturo Acuna Duran 2022049304
        */
     public static List<String> LoadFile(File LoadedPath) throws IOException{
+        // Se puede evidenciar el concepto de Metodo, recuerdese que un metodo es una capacidad que tiene el objeto, una accion
+        // En este caso, el Objeto TableBulder tiene la capacidad de cargar archivos CSV, eso es lo que se programo en este metodo
         List<String> FileAsList = new ArrayList<String>();
 
         if(LoadedPath != null){
@@ -50,7 +52,11 @@ import java.util.Objects;
        */
     public static ObservableList<Student> InstanciateStudents(ObservableList<Student> List, List<String> FileAsList, int Counter){
         if (Objects.equals(FileAsList.get(Counter + 5), "A")) {
+            // Se puede evidenciar el concepto de instanicacion, recuerdese que instanciar consiste en el uso de una clase para poder crear un Objeto, en
+            // Este caso se esta haciendo uso de StudentA y StudentB para crear objetos Estudiante que tengan como atributos lo que se cargo en el archivo CSV
             List.add(new StudentA(
+                    // Se puede evidenciar el Polimorfismo, observese como StudentA se instancia de manera distinta dependiendo de los parametros que se le den a este
+                    // Un solo objeto tiene varias formas.
                     FileAsList.get(Counter),
                     FileAsList.get(Counter + 1),
                     FileAsList.get(Counter + 2),
@@ -63,7 +69,7 @@ import java.util.Objects;
                     Integer.parseInt(FileAsList.get(Counter + 9)),
                     Integer.parseInt(FileAsList.get(Counter + 10)),
                     Integer.parseInt(FileAsList.get(Counter + 11)),
-                    null,
+                    null, // Se puede comprender el concepto de sobreescritura, ya que estos parametros seran sobreescritos en la instanciacion de StudentA
                     null,
                     null
             ));
@@ -87,7 +93,8 @@ import java.util.Objects;
             ));
 
         }if(Counter < (FileAsList.size() - 12)){
-            return InstanciateStudents(List, FileAsList, Counter + 12); // Recursividad de Cola
+            return InstanciateStudents(List, FileAsList, Counter + 12); // Se hace uso de recursividad de Cola para poder Instanciar los estudiantes con
+            // Los elementos de toda la Lista
         } else{
             return List;}
         }

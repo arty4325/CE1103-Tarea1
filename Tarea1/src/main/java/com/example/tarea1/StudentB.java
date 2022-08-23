@@ -9,8 +9,8 @@ import java.util.OptionalDouble;
  */
 class StudentB extends Student {
 
-    //En esta clase se puede ver el concepto de herencia, la clase StudentB es hija de la clase StudentA, es entonces que no se tienen que redefinir los atributos ya que estos estan
-    //en la clase padre, y no se tienen que volver a programar los "Getters"
+    // Se puede evidenciar el concepto de Herencia, en este caso se heredan las definiciones, parte del contstructur y los getters de Student
+    // Pero se programa en la clase hija StudentB lo que se solicita en la especificacion. "
 
 
     public StudentB(
@@ -41,9 +41,5 @@ class StudentB extends Student {
         this.PromedioProyectos = promedioproys;
         this.PromedioExQT = null;
         this.NotaFinal = Final;
-
-
     }
-
-
 }

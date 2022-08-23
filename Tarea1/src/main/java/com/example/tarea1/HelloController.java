@@ -26,7 +26,7 @@ import java.util.*;
  * @author Oscar Arturo Acuna Duran 2022049304
  */
 public class HelloController implements Initializable {
-
+    // En los siguientes atributos se puede ver el concepto de encapsulacion, ya que estos estan protegidos por la clase
     @FXML
     private Button btn1;
 
@@ -95,7 +95,6 @@ public class HelloController implements Initializable {
         FileChooser fc = new FileChooser();
         File selectedFile = fc.showOpenDialog(null);
         List<String> FileAsList;
-        // Insertar el Link
         FileAsList = TableBuilder.LoadFile(selectedFile);
         List = TableBuilder.InstanciateStudents(List, FileAsList, 12);
         Table.refresh();

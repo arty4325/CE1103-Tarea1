@@ -8,10 +8,10 @@ import java.util.OptionalDouble;
  * @author Arturo Acuna Duran 2022049304
  */
 public class Student {
-    // Carne, Correo, Nikname, Nombre, NotaFinal, etc... corresponden a los atributos de la clase Student. Se sabe que los atributos son
-    // las caracteristicas que tiene un objeto, en este caso el objeto estudiante tiene carne, correo, notas, etc...
+    // Se puede evidenciar el concepto de Clase, recuerdese que desde un punto de vista interpretativo la Clase es el "Molde" que se utiliza para poder
+    // Crear o Intanciar los objetos, en este cacso la clase Student es el molde con el cual se pueden instanciar los estudiantes y sus distintos atributos
     protected String Carne; // Se puede evidenciar el concepto de encapsulación, ya que las variables que se definen aqui solamente son accesables por las clases hijas a student, pero estan encapsuladas para otras clases como Controller
-    protected String Correo;
+    protected String Correo; // Ademas se puede ver el concepto de Atributos, ya que el Objeto Estudiante tiene la cualidad de tener Carne, Correo, Nikname, etc...
     protected String Nikname;
     protected String Nombre;
     protected Double NotaFinal;
@@ -27,7 +27,10 @@ public class Student {
     protected String Telefono;
     protected String Tipo;
 
-    public Student(String carne,
+    public Student( // En la clase Student se puede compernder el concepto de Abstraccion, ya que se esta abstrayendo el estudiante
+                    // mediante esta clase, un estudiante tiene mas atributos que los que esta clase describe, sin embargo
+                    // Eso es por que el objeto Estudiante es una abtraccion de un estudiante, es la idea de un estudiante, no un estudiante
+                   String carne,
                    String nombre,
                    String correo,
                    String telefono,

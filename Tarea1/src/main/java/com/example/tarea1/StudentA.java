@@ -8,7 +8,8 @@ import java.util.OptionalDouble;
  * @author Arturo Acuna Duran 2022049304
  */
 class StudentA extends Student {
-
+    // Se puede evidenciar el concepto de Herencia, en este caso se heredan las definiciones, parte del contstructur y los getters de Student
+    // Pero se programa en la clase hija StudentA lo que se solicita en la especificacion.
     public StudentA(
                     String carne,
                     String nombre,
